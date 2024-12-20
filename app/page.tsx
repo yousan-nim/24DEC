@@ -6,9 +6,13 @@ import DSD from "@/components/dsd";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className=""
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}
+    >
       <main className="">
-        <DSD /> 
+        <DSD />
       </main>
     </div>
   );

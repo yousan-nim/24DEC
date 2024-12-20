@@ -58,14 +58,14 @@ const DSD: React.FC = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (activeBtn === 1) {
-                setActiveBtn(7);
-            }
-        }, 60000);
-        return () => clearInterval(intervalId);
-    }, [activeBtn]);
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         if (activeBtn === 1) {
+    //             setActiveBtn(7);
+    //         }
+    //     }, 60000);
+    //     return () => clearInterval(intervalId);
+    // }, [activeBtn]);
 
     // 🎉 New useEffect for Video Countdown Timer
     useEffect(() => {
