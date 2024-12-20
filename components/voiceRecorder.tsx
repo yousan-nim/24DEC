@@ -178,11 +178,17 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({ setTranscript, setActiveB
         <div className="voice-recorder w-[120px] h-[120px]">
             <button
                 onClick={isRecording ? stopRecording : startRecording}
-                className={`w-full h-full ${isRecording ? 'bg-red-600' : 'bg-white text-black'} transition-colors rounded-full`}
+                className={`w-full h-full relative ${isRecording ? 'bg-red-600' : 'bg-white text-black'} transition-colors rounded-full`}
             >
-                <PiMicrophoneLight className={`w-full h-[50%] ${isRecording ? "text-black w-full m-auto animate-ping duration-700" : "text-black w-full m-auto "}`} />
+                <img
+                    src="./png/btn.png"
+                    alt="Microphone button"
+                    className="w-full h-full rounded-full object-cover"
+                />
+                <PiMicrophoneLight className={`absolute inset-0 w-full h-[50%] ${isRecording ? "text-black m-auto animate-ping duration-700" : "hidden"}`} />
             </button>
         </div>
+
     );
 }
 
